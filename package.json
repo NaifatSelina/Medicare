@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/NaifatSelina/Medicare\\/issues"
   },
-  "homepage": "https://github.com/NaifatSelina/Medicare\\#readme"
+  "homepage": "https://github.com/NaifatSelina/Medicare\\#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
