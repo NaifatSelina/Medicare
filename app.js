@@ -1,4 +1,6 @@
+require('dotenv').config();
 const db = require('./db');
+
 
 db.query('SELECT * FROM your_table', (err, results) => {
     if (err) {

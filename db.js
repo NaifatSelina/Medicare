@@ -1,12 +1,12 @@
+require('dotenv').config();
 console.log('Starting db.js');
 const mysql = require('mysql');
-require('dotenv').config(); // Load environment variables from .env file
 
 const connection = mysql.createConnection({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'youruser',
-  password: process.env.DB_PASSWORD || 'yourpassword',
-  database: process.env.DB_DATABASE || 'yourdbname',
+  host: process.env.DB_HOST || 'database-1.csg0aeybpskz.eu-west-2.rds.amazonaws.com',
+  user: process.env.DB_USER || 'admin',
+  password: process.env.DB_PASSWORD || 'abdallah123.',
+  database: process.env.DB_DATABASE || 'database-1',
   port: process.env.DB_PORT || 3306,
 });
 
