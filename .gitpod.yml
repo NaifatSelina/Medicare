@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.dockerfile
+image: node:buster
 
 tasks:
   - name: Install Dependencies
