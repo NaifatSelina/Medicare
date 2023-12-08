@@ -91,9 +91,58 @@ const footerStyle = {
   textAlign: 'center',
 };
 
-// Component
+// Checkout Component
+const Checkout = ({ cartItems }) => {
+  const [paymentMethod, setPaymentMethod] = useState('');
+
+  const handlePayment = () => {
+    // Implement actual payment processing logic here (e.g., communicate with a payment gateway)
+    console.log(`Processing ${paymentMethod} payment for items: `, cartItems);
+  };
+
+  return (
+    <div>
+      <h2>Checkout</h2>
+      <div>
+        <h3>Select Payment Method:</h3>
+        <label>
+          <input
+            type="radio"
+            value="card"
+            checked={paymentMethod === 'card'}
+            onChange={() => setPaymentMethod('card')}
+          />
+          Card Payment
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="cash"
+            checked={paymentMethod === 'cash'}
+            onChange={() => setPaymentMethod('cash')}
+          />
+          Cash on Delivery
+        </label>
+      </div>
+
+      {paymentMethod === 'card' && (
+        <div>
+          <p>Card Payment Form</p>
+        </div>
+      )}
+
+      <div>
+        <br></br>
+        <button onClick={handlePayment}>Complete Payment</button>
+      </div>
+    </div>
+  );
+};
+
+// Cart Component
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+
 
   const medicineData = [
     {
@@ -124,7 +173,6 @@ const Cart = () => {
       description: 'Description of Medicine D.',
       image: 'https://example.com/medicineD.jpg',
     },
-
   ];
   
 
@@ -189,6 +237,9 @@ const Cart = () => {
           )}
         </div>
       </div>
+
+      {/* Checkout Component */}
+      <Checkout cartItems={cartItems} />
 
       {/* Footer */}
       <div style={footerStyle}>
