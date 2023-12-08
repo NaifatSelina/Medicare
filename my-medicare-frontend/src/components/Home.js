@@ -1,5 +1,3 @@
-// Home.js
-
 import React from 'react';
 
 const Home = () => {
@@ -16,6 +14,7 @@ const Home = () => {
             <a href="#">Products</a>
             <a href="#">About Us</a>
             <a href="#">Contact</a>
+            <a href="#">Login</a>
           </div>
         </div>
       </nav>
@@ -34,16 +33,15 @@ const Home = () => {
         <h2 style={featuredTitleStyle}>Featured Products</h2>
         <div style={featuredProductsStyle}>
           {/* Product 1 */}
-          <div style={productCardStyle}>
-            <img src="https://via.placeholder.com/150" alt="Product 1" style={productImageStyle} />
-            <div style={productInfoStyle}>
-              <h5>Product 1</h5>
-              <p>Description of Product 1.</p>
-              <button style={buttonStyle}>View Details</button>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div key={index} style={productCardStyle}>
+              <img src="https://via.placeholder.com/150" alt={`Product ${index + 1}`} style={productImageStyle} />
+              <div style={productInfoStyle}>
+                <h5>Product {index + 1}</h5>
+                <p>Description of Product {index + 1}.</p>
+              </div>
             </div>
-          </div>
-
-          {/* Add similar cards for other featured products */}
+          ))}
         </div>
       </div>
 
