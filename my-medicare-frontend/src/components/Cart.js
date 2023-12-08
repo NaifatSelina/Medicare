@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 // Styles
 const navStyle = {
@@ -87,10 +86,9 @@ const footerStyle = {
   color: '#fff',
   padding: '20px 0',
   position: 'fixed',
-  width : '100%',
+  width: '100%',
   bottom: 0,
   textAlign: 'center',
-  
 };
 
 // Component
@@ -98,8 +96,37 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
 
   const medicineData = [
-    // ... (unchanged)
+    {
+      id: 1,
+      name: 'Medicine A',
+      price: 19.99,
+      description: 'Description of Medicine A.',
+      image: 'https://example.com/medicineA.jpg',
+    },
+    {
+      id: 2,
+      name: 'Medicine B',
+      price: 29.99,
+      description: 'Description of Medicine B.',
+      image: 'https://example.com/medicineB.jpg',
+    },
+    {
+      id: 3,
+      name: 'Medicine C',
+      price: 14.99,
+      description: 'Description of Medicine C.',
+      image: 'https://example.com/medicineC.jpg',
+    },
+    {
+      id: 4,
+      name: 'Medicine D',
+      price: 24.99,
+      description: 'Description of Medicine D.',
+      image: 'https://example.com/medicineD.jpg',
+    },
+
   ];
+  
 
   const handleAddToCart = (medicine) => {
     setCartItems([...cartItems, medicine]);
@@ -120,7 +147,7 @@ const Cart = () => {
             Medicare
           </a>
           <div style={navLinksStyle}>
-          <a href="#">Home</a>
+            <a href="#">Home</a>
             <a href="#">Products</a>
             <a href="#">About Us</a>
             <a href="#">Login</a>
