@@ -13,7 +13,6 @@ const Home = () => {
             <a href="#">Home</a>
             <a href="#">Products</a>
             <a href="#">About Us</a>
-            <a href="#">Contact</a>
             <a href="#">Login</a>
           </div>
         </div>
