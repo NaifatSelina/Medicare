@@ -12,13 +12,12 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/registration" component={Registration} />
           <Route path="/medicines" component={MedicineList} />
-          <Route path="/" component={Cart} />
+          <Route path="/cart" component={Cart} />
           <Route path="/order-summary" component={OrderSummary} />
-          {/* Add more routes as needed */}
         </Switch>
       </div>
     </Router>
